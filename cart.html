@@ -58,12 +58,12 @@
       </script>
    </head>
    <body>
-      <section id="page-in">
+      <section id="page-in" class="cart-page">
          <div class="cart-pg col-lg-8 col-lg-offset-3 col-md-9 col-md-offset-3 col-xs-9 col-xs-offset-3">
             <div class="back-link">
                <a href="#">back</a>
             </div>
-            <div class="cart-page">
+            <div class="cart-box">
                 <h2 class="text-left">Shopping cart</h2>
                 <div class="dt">
                    <div class="dt-r dt-r--head">
@@ -185,6 +185,7 @@
                 </div>
                <a href="#" class="butt pull-right">checkout</a>
             </div>
+            <div class="title-page">Shipping/ Terms & Conditions</div>
          </div>
       </section>
       <script>
@@ -219,10 +220,12 @@
             	var menu = $(".menu-main"),
             		logo_but = $(".logo-button");
             	if ("none" == menu.css("display")) {
+                logo_but.addClass('open');
             		$(".near-nav").fadeIn(0);
             		$(".menu-main").fadeIn("fast").css('display','table');
             	} 
             	else {
+                logo_but.removeClass('open');
             		$(".near-nav").fadeOut(0);
             		$(".menu-main").fadeOut("fast");
             	}

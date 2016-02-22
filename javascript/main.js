@@ -48,6 +48,8 @@ $(document).ready(function() {
       nav: false,
       lazyLoad: true,
       margin: 10,
+      navRewind: false,
+      nav:true,
       // center: true,
       responsive: {
         0: {
@@ -120,11 +122,11 @@ $(document).ready(function() {
     fn();
     return fn;
   })());
-  // fancy box
-  // $(".fancy").fancybox();
-  // fancy box
+  // placeholder
+  $('input, textarea').placeholder();
+  // placeholder
   // validate form
-  $('.js_validate button[type="submit"]').on("click", function(){
+  $('.js_validate [type="submit"]').on("click", function(){
     return validate($(this).parents(".js_validate"));
   }); 
 });

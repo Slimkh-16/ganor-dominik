@@ -64,7 +64,7 @@
    </head>
    <body>
       <section id="page-in">
-         <div class="col-xs-8 col-xs-offset-3">
+         <div class="cart-pg col-lg-8 col-lg-offset-3 col-md-9 col-md-offset-3 col-xs-9 col-xs-offset-3">
             <div class="back-link">
                <a href="#">back</a>
             </div>
@@ -134,8 +134,8 @@
                 <a href="#" class="butt">add to cart</a>
               </div>
             </div>
+            <div class="title-page">Shipping/ Terms & Conditions</div>
          </div>
-         <div class="title-page">Shipping/ Terms & Conditions</div>
       </section>
       <a onClick="getCart();" style="display:none;" class="shopping-bag" style="">
       <img src="image/shoping-bag.png" alt="Shopping Bag" title="Shopping Bag" />
@@ -163,10 +163,12 @@
             	var menu = $(".menu-main"),
             		logo_but = $(".logo-button");
             	if ("none" == menu.css("display")) {
+                logo_but.addClass('open');
             		$(".near-nav").fadeIn(0);
             		$(".menu-main").fadeIn("fast").css('display','table');
             	} 
             	else {
+                logo_but.removeClass('open');
             		$(".near-nav").fadeOut(0);
             		$(".menu-main").fadeOut("fast");
             	}
